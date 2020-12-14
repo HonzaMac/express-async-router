@@ -25,7 +25,8 @@
     "es6"
   ],
   "scripts": {
-    "test": "grunt"
+    "build": "grunt",
+    "test": "mocha"
   },
   "dependencies": {
     "@types/express": "^4.16.0",
@@ -33,14 +34,24 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "after": "^0.8.2",
+    "assert": "^2.0.0",
     "grunt": "^1.0.3",
     "grunt-build-control": "^0.7.1",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-ts": "^6.0.0-beta.21",
     "grunt-tslint": "^5.0.2",
+    "methods": "^1.1.2",
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1",
     "time-grunt": "^1.4.0",
+    "ts-node": "^9.1.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
+  },
+  "mocha": {
+    "require": "ts-node/register/transpile-only",
+    "project": "tsconfig.json"
   }
 }
